@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+a{
+  cursor: pointer;
+}
+.row-striped:nth-of-type(odd){
+  background-color: white;
+  border-left: 4px #000000 solid;
+}
+
+.row-striped:nth-of-type(even){
+  background-color: #ffffff;
+  border-left: 4px white solid;
+}
+
+.row-striped {
+  padding: 15px 0;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+}

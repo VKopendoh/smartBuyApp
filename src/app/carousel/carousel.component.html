@@ -1,0 +1,14 @@
+<ngu-carousel #myCarousel [inputs]="carouselConfig" [dataSource]="items">
+  <div *nguCarouselDef="let item;" class="item">
+    <div class="tile">
+      <img class="carousel-img" src="{{item.src}}" size="100%">
+    </div>
+  </div>
+  <button NguCarouselNext class="rightRs">></button>
+  <button NguCarouselPrev class="leftRs"><</button>
+  <ul class="myPoint" NguCarouselPoint>
+    <li *ngFor="let item of myCarousel.pointNumbers; let j = index" [class.active]="j==myCarousel.activePoint" (click)="myCarousel.moveTo(j)"></li>
+  </ul>
+</ngu-carousel>
+
+

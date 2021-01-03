@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar-custom">
+  <a class="navbar-brand" href="#">
+    {{'clubHeader' | translate}} <br>
+    {{'nameHeader' | translate}}
+  </a>
+  <a href="#" class="fa fa-facebook"></a>
+  <a href="#" class="fa fa-twitter"></a>
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item active">
+      <a class="nav-link">{{'faq' | translate}}  <img src="../../assets/icons/question.svg" width="25" class="filter-white"></a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button" data-toggle="dropdown"
+         aria-haspopup="true" aria-expanded="false">
+        {{lang}}
+        <img src="../../assets/icons/global.svg" width="25" class="filter-white">
+      </a>
+      <div class="dropdown-menu" aria-labelledby="langDropdown">
+        <a class="dropdown-item" (click)="changeLang('en')">English</a>
+        <a class="dropdown-item" (click)="changeLang('ru')">Русский</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="loginDropdown" role="button" data-toggle="dropdown"
+         aria-haspopup="true" aria-expanded="false">
+        {{'login'|translate}}
+        <img src="../../assets/icons/login.svg" width="25" class="filter-white">
+      </a>
+      <div class="dropdown-menu" style="margin: auto; padding: 15px; padding-bottom: 0px;" aria-labelledby="loginDropdown">
+        <form action="" method="post" accept-charset="UTF-8">
+          <input id="user_username" style="margin-bottom: 15px;" type="text" name="user[username]" size="30" />
+          <input id="user_password" style="margin-bottom: 15px;" type="password" name="user[password]" size="30" />
+          <input id="user_remember_me" style="float: left; margin-right: 10px;" type="checkbox" name="user[remember_me]" value="1" />
+          <label class="string optional" for="user_remember_me"> Remember me</label>
+
+          <input class="btn btn-primary" style="clear: left; width: 100%; height: 32px; font-size: 13px;" type="submit" name="commit" value="Sign In" />
+        </form>
+      </div>
+    </li>
+  </ul>
+</nav>

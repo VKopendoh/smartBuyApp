@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-custom ">
+  <a href="#" class="navbar-brand">
+    <img src="../../assets/images/logo.svg" height="55" alt="КОНИМ ХАХАМИМ" >
+  </a>
+  <button class="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" (click)="navigateTo([''])">{{'main' | translate}}</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-toggle="dropdown"
+           aria-haspopup="true" aria-expanded="false">
+          {{'about' | translate}}
+        </a>
+        <div class="dropdown-menu" aria-labelledby="aboutDropdown">
+          <a class="dropdown-item" (click)="navigateTo(['about', 'video'])">{{'video' | translate}}</a>
+          <a class="dropdown-item" (click)="navigateTo(['about', 'manual'])">{{'manual' | translate}}</a>
+          <a class="dropdown-item" (click)="navigateTo(['about', 'android'])">{{'android' | translate}}</a>
+        </div>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" (click)="navigateTo(['actions'])">{{'actions' | translate}}</a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link">{{'tenders' | translate}}</a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link">{{'partners' | translate}}</a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
